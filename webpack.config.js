@@ -1,24 +1,23 @@
-const path = require("path");
-const webpack = require("webpack");
+const path = require('path');
 
 module.exports = {
-  context: path.resolve(__dirname, "./src"),
+  context: path.resolve(__dirname, './src'),
   entry: {
-    app: "./main.js",
+    app: './main.js',
   },
   output: {
-    filename: "bundle.js",
-    path: path.resolve(__dirname, "./dist"),
+    filename: 'bundle.js',
+    path: path.resolve(__dirname, './dist'),
   },
   devServer: {
-    contentBase: path.resolve(__dirname, "./dist"),
+    contentBase: path.resolve(__dirname, './dist'),
   },
   module: {
     rules: [
       {
         test: /\.js$/,
         exclude: [/node_modules/],
-        use: [{ loader: "babel-loader" }],
+        use: [{ loader: 'babel-loader' }],
       },
     ],
   },
