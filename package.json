@@ -1,9 +1,10 @@
 {
-  "name": "js-tdd-template",
+  "name": "spotify-wrapper-player",
   "version": "1.0.0",
-  "description": "Nossa biblioteca do curso de JS com TDD na prática.",
+  "description": "A player using the spotify-wrapper.",
   "main": "index.js",
   "scripts": {
+    "start": "./node_modules/.bin/webpack-dev-server",
     "clear": "rimraf lib",
     "build": "npm run clear && ./node_modules/.bin/babel --out-dir lib src",
     "build:watch": "npm run build -- --watch",
@@ -38,16 +39,24 @@
   },
   "homepage": "https://github.com/cassianomon/js-tdd-template#readme",
   "devDependencies": {
-    "babel-cli": "^6.24.1",
+    "babel-loader": "^7.0.0",
     "babel-preset-env": "^1.3.2",
     "babel-register": "^6.24.0",
     "chai": "^3.5.0",
-    "eslint": "^4.18.2",
-    "eslint-config-airbnb-base": "^11.2.0",
-    "eslint-plugin-import": "^2.6.1",
+    "eslint": "^3.7.1",
+    "eslint-config-airbnb": "^12.0.0",
+    "eslint-plugin-import": "^2.0.1",
+    "eslint-plugin-jsx-a11y": "^2.2.3",
+    "eslint-plugin-react": "^6.4.1",
     "husky": "^0.11.9",
+    "jsdom": "^11.0.0",
+    "jsdom-global": "^3.0.2",
     "mocha": "^3.2.0",
     "nyc": "^10.2.0",
-    "rimraf": "^2.6.1"
+    "webpack": "^2.6.1",
+    "webpack-dev-server": "^2.4.5"
+  },
+  "dependencies": {
+    "spotify-wrapper": "^2.0.2"
   }
 }
